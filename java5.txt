@@ -1,0 +1,24 @@
+package oops;
+public class ClassDemo6 {
+	public static void main(String[] args) {
+		Dog tiger=new Dog();
+		tiger.react(new Stick());
+	}
+}
+//method overloadi/ng - data changes behavior changes - POLYMORPHISM
+//VIRTUAL METHOD INVOCATION OR DYNAMIC METHOD DISPATCH
+class Dog{
+	public void react(Stone stone) {
+		System.out.println("you throw I run....");
+	}
+	
+	public void react(Stick stick) {
+		System.out.println("you beat I bite....");
+	}
+	public void react(Biscuit biscuit) {
+		System.out.println("yummy yummy i love biscuit...");
+	}
+}
+class Stone{}
+class Stick{}
+class Biscuit{}

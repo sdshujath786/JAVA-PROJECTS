@@ -1,0 +1,25 @@
+package oops;
+public class ClassDemo9 {
+	public static void main(String[] args) {
+		ThisDemo obj=new ThisDemo(10);
+		obj.displayI();
+	}
+}
+class ThisDemo{
+	int age;//instance variable
+	
+	public ThisDemo(int age) {//age here is local variable
+		this.age=age;
+		//this keyword refers to the current instance or object
+	}
+	
+	public void displayI() {
+		System.out.println(age);
+		new UseThisDemo().use(this);
+	}
+}
+class UseThisDemo{
+	public void use(ThisDemo td) {
+		System.out.println(td.age);
+	}
+}

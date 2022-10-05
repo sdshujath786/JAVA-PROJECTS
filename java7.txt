@@ -1,0 +1,28 @@
+package oops;
+public class ConstructorDemo {
+	public static void main(String[] args) {
+		new Whale();
+		new Human();
+		new Giraffe();
+	}
+}
+//What is needed for the mere survival of the object
+//should be initialized in the constructor
+class Whale{
+	public Whale() {//this is a constructor
+		System.out.println("whale cons is called...");
+		System.out.println("swimming is initialized in the constructor...");
+	}
+}
+class Human{
+	public Human() {//this is a constructor
+		System.out.println("human cons is called...");
+		System.out.println("crying is initialized in human..");
+	}
+}
+class Giraffe{
+	public Giraffe() {//this is a constructor
+		System.out.println("giraffe cons is called...");
+		System.out.println("running is initialized in giraffe...");
+	}
+}

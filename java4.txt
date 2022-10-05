@@ -1,0 +1,23 @@
+package oops;
+public class ClassDemo7 {
+	public static void main(String[] args) {
+		HelpLine911 my911=new HelpLine911();
+		my911.helpLine(new Medical());
+		Police lapd=new Police();				
+	}
+}
+class HelpLine911{
+	public void helpLine(Police po) {
+		System.out.println("yes police speaking..how can i help you..");
+	}
+	public void helpLine(Medical med) {
+		System.out.println("doctor speacking..how can i help you..");
+	}
+	
+	public void helpLine(Danger dan) {
+		System.out.println("fire service speaking..how can i help you..");
+	}
+}
+class Police{}
+class Medical{}
+class Danger{}

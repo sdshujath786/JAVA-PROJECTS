@@ -1,0 +1,37 @@
+package oops;
+/*
+ * Simple/Primitive type - int,float,byte,short,long,double,char,String
+ * Complex type/user defined type - any java class
+ */
+public class PbvPbrDemo {
+	public static void main(String[] args) {
+		Student rahim=new Student();
+		
+		String word="Indira Gandhi";
+		//PASS BY VALUE
+		System.out.println("Before passing primitive ...:"+word);
+		rahim.whisper(word);
+		System.out.println("After passing primitive...:"+word);
+		
+		
+		Sugar sugar=new Sugar();
+		//PASS BY REFERENCE
+		System.out.println("Before passing complex..:"+sugar.weight);
+		rahim.acceptSugar(sugar);
+		System.out.println("After passing complex...:"+sugar.weight);
+	}
+}
+class Sugar{
+	int weight=100;
+}
+class Student{
+	//pass by reference
+	public void acceptSugar(Sugar s) {
+		s.weight=s.weight-10;
+	}
+	
+	//pass by value
+	public void whisper(String word) {
+		word="rhino";
+	}
+}

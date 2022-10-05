@@ -1,0 +1,29 @@
+package oops;
+public class ClassDemo1 {
+	public static void main(String[] args) {
+		ATM stateBankATM=new ATM();
+		
+		stateBankATM.displayBalance();
+	
+		int money=stateBankATM.withDrawMoney(1000);
+		
+		System.out.println("Money Withdrawn...:"+money);
+		
+		stateBankATM.displayBalance();
+	}
+}
+class ATM{
+	//Any variable declared outside a method is called
+	//Global Variable or instance variable
+	//this variable is accessible across the methods
+	int money=10000;
+	
+	public int withDrawMoney(int amt) {
+		money=money-amt;
+		return amt;
+	}
+	
+	public void displayBalance() {
+		System.out.println("Your balance is...:"+money);
+	}
+}

@@ -1,0 +1,44 @@
+package oops;
+import java.util.Scanner;
+public class ClassDemo3 {
+	public static void main(String[] args) {
+		Calculator sanyo=new Calculator();
+		
+		Scanner scan=new Scanner(System.in);
+		
+		while(true) {
+		System.out.println("Please enter number 1..:");
+		int x=scan.nextInt();
+		System.out.println("Please enter number 2..:");
+		int y=scan.nextInt();
+		
+		
+		System.out.println("Please enter + for Addition:");
+		System.out.println("Please enter - for Substraction:");
+		System.out.println("Please enter * for multiplication:");
+		System.out.println("Please enter / for division:");
+		
+		//char operation=(char)scan.nextInt();
+		String operation=scan.next();
+		
+			switch(operation) {
+				case "+":{
+					System.out.println("Addition..:"+sanyo.add(x,y));
+					break;
+				}
+				case "-":{
+					System.out.println("Subtraction..:"+sanyo.subtract(x,y));
+					break;
+				}
+				case "*":{
+					System.out.println("Multiply..:"+sanyo.multiply(x,y));
+					break;
+				}
+				case "/":{
+					System.out.println("Divide..:"+sanyo.divide(x,y));
+					break;
+				}
+			}	
+		}
+	}
+}

@@ -1,0 +1,20 @@
+package oops;
+//COMPLEX TYPES
+public class ClassDemo4 {
+	public static void main(String[] args) {
+		Employee rahim=new Employee();
+		Office office=new Office();
+		office.work(rahim);//pass a complex type or passing a reference
+	}
+}
+class Employee{
+	public void empWork() {
+		System.out.println("employee is working...");
+	}
+}
+class Office{
+	public void work(Employee emp) {
+		//System.out.println(emp);
+		emp.empWork();
+	}
+}

@@ -1,0 +1,22 @@
+package oops;
+public class ClassDemo8 {
+	public static void main(String[] args) {
+		ClassDemo8 obj=new ClassDemo8();
+		obj.met(new int[] {20,30,40,50});
+		
+		int arr[]= {30,40,60,20};
+		obj.met(arr);
+		
+		obj.met2(20,30,40,50);
+	}
+	
+	public void met(int a[]) {
+		System.out.println(a[1]);
+	}
+	
+	//jdk5 - VARARGS
+	
+	public void met2(int ...i) {
+		System.out.println(i[1]);
+	}
+}

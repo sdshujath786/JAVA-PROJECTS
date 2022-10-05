@@ -1,0 +1,15 @@
+package oops;
+public class PbvPbrArrayDemo {
+public static void main(String[] args) {
+	int arr[]= {10,20,30,40};
+	//ARRAYS ARE ALWAYS PASS BY REFERENCE - BECAUSE THEY ARE TREATED AS OBJECTS
+	PbvPbrArrayDemo obj=new PbvPbrArrayDemo();
+	System.out.println(arr[1]);
+	obj.met(arr);
+	System.out.println(arr[1]);
+	
+}
+public void met(int i[]) {
+	i[1]=9999;
+}
+}
